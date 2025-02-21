@@ -41,7 +41,7 @@ class DataIngestion:
             df.replace({"na":np.nan},inplace=True)
             return df    
         except Exception as e:
-            raise NetworkSecurityException
+          raise NetworkSecurityException
 
     def export_data_into_feature_store(self,dataframe: pd.DataFrame):
         try:
@@ -51,7 +51,7 @@ class DataIngestion:
             dataframe.to_csv(feature_store_file_path,index=False,header=True)
             return dataframe 
         except Exception as e:
-            raise NetworkSecurityException(e,sys) 
+           raise NetworkSecurityException(e,sys) 
 
     def split_data_as_train_test(self,dataframe: pd.DataFrame):
         try:
@@ -81,7 +81,7 @@ class DataIngestion:
 
 
         except Exception as e:
-            raise NetworkSecurityException(e,sys)                      
+           raise NetworkSecurityException(e,sys)                      
 
     def initiate_data_ingestion(self):
         try:
